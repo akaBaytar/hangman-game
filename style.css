@@ -1,0 +1,146 @@
+/* google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* bootstrap icons */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+/* resetting */
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #9f91cc;
+  font-family: "Poppins", sans-serif;
+}
+
+/* project style */
+.container {
+  padding: 2rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}
+
+.description {
+  color: #f9fafb;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.game {
+  position: relative;
+  padding: 5rem;
+  width: 30rem;
+  height: 20rem;
+}
+
+.figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: transparent;
+  stroke: #f9fafb;
+  stroke-width: 0.35rem;
+  stroke-linecap: round;
+}
+
+.figure-part {
+  display: none;
+}
+
+.letters {
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  min-height: 5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: #d5d5d5;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.wrong-letters span {
+  display: flex;
+  gap: 0.25rem;
+  text-align: center;
+  font-size: 1.25rem;
+  color: #ccc;
+}
+
+.word {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.5rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  color: #f9fafb;
+  transform: translateX(-50%);
+}
+
+.letter {
+  width: 1.5rem;
+  height: 2.5rem;
+  border-bottom: 5px solid #3d246c;
+}
+
+.popup {
+  position: fixed;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-message {
+  padding: 3rem 4rem;
+  color: #f9fafb;
+  background-color: #3d246c;
+  border-radius: 0.5rem;
+}
+
+.popup-description {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+
+.popup-message button {
+  width: 100%;
+  height: 2.5rem;
+  border: none;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  color: #f9fafb;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.notification {
+  padding: 1rem;
+  color: #f9fafb;
+  background-color: #3d246c;
+  border-radius: 0.5rem 0.5rem 0 0;
+  position: absolute;
+  left: 50%;
+  bottom: -4rem;
+  transform: translateX(-50%);
+  transition: bottom 0.3s ease-in-out;
+}
+
+.notification.show {
+  bottom: 0;
+}

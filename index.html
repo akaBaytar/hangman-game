@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Hangman Game</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title" style="color: #3d246c">Hangman</h1>
+      <p class="description">Find the hidden animal name - Enter a letter</p>
+
+      <div class="game">
+        <svg class="figure" width="200" height="250">
+          <!-- rod -->
+          <line x1="60" y1="20" x2="140" y2="20" />
+          <line x1="140" y1="20" x2="140" y2="50" />
+          <line x1="60" y1="20" x2="60" y2="230" />
+          <line x1="20" y1="230" x2="100" y2="230" />
+
+          <!-- head -->
+          <circle cx="140" cy="70" r="20" class="figure-part" />
+
+          <!-- body -->
+          <line x1="140" y1="90" x2="140" y2="150" class="figure-part" />
+
+          <!-- arms -->
+          <line x1="140" y1="100" x2="120" y2="130" class="figure-part" />
+          <line x1="140" y1="100" x2="160" y2="130" class="figure-part" />
+
+          <!-- legs -->
+          <line x1="140" y1="150" x2="120" y2="180" class="figure-part" />
+          <line x1="140" y1="150" x2="160" y2="180" class="figure-part" />
+        </svg>
+
+        <div class="letters">
+          <div class="wrong-letters">
+            <strong style="display: block">Wrong Letters</strong>
+            <span id="wrong-letters"></span>
+          </div>
+        </div>
+
+        <div class="word"></div>
+      </div>
+
+      <div class="popup">
+        <div class="popup-message">
+          <h3 class="popup-title"></h3>
+          <p class="popup-description"></p>
+          <button id="play">Play Again</button>
+        </div>
+      </div>
+
+      <div class="notification">
+        <p class="notification-message">
+          You have already entered this letter.
+        </p>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
