@@ -81,6 +81,7 @@ function showName() {
   const innerName = wordDOM.innerText.replace(/\n/g, "");
   if (innerName === randomAnimalName) {
     popupMessageDOM.innerText = "Congratulations, you won!";
+    popupDescriptionDOM.innerText = "";
     popupDOM.style.display = "flex";
   }
 }
